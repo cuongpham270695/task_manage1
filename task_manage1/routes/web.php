@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,3 +41,4 @@ Route::prefix('customer')->group(function (){
 
     });
 });
+Route::get('customers',[TaskController::class,'index']);

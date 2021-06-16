@@ -6,7 +6,8 @@
 </head>
 <body>
 <h1>Danh sách khách hàng</h1>
-<table border="1">
+<a href="" type="submit">Thêm</a>
+<table border="1" style="border-collapse: collapse; width: 40%; text-align: center; height: 30px">
     <thead>
     <tr>
         <th>STT</th>
@@ -23,7 +24,7 @@
         <td>01234567890</td>
         <td>email.test@mail.com</td>
         <td>
-            <a href="#">Xem</a> | <a href="#">Sửa</a> | <a href="#">Xóa</a&
+            <a href="#">Xem</a> | <a href="#">Sửa</a> | <a href="#">Xóa</a>
         </td>
     </tr>
     <tr>
