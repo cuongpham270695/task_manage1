@@ -9,21 +9,35 @@ class TaskController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function index()
     {
-        return view('modules.customer.index');
+        $customers = [
+            [
+                'id' => 1,
+                'name' => 'Cuong',
+                'phone' => '03215466977',
+                'email' => 'abc@gmail.com'
+            ],
+            [
+                'id' => 2,
+                'name' => 'Hung',
+                'phone' => '0985145643',
+                'email' => 'hung@gmail.com'
+            ]
+        ];
+        return view('modules.customer.index',compact('customers'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function create()
     {
-        //
+        return view('modules.customer.create');
     }
 
     /**
@@ -34,7 +48,7 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        echo "This is store";
     }
 
     /**
@@ -45,7 +59,7 @@ class TaskController extends Controller
      */
     public function show($id)
     {
-        //
+        echo "This is show";
     }
 
     /**
@@ -56,7 +70,7 @@ class TaskController extends Controller
      */
     public function edit($id)
     {
-        //
+        echo "This is edit";
     }
 
     /**
@@ -68,7 +82,7 @@ class TaskController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        echo "update something";
     }
 
     /**
@@ -79,6 +93,6 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        //
+        echo "destroy something";
     }
 }

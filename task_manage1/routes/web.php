@@ -41,4 +41,10 @@ Route::prefix('customer')->group(function (){
 
     });
 });
-Route::get('customers',[TaskController::class,'index']);
+Route::get('customers',[TaskController::class,'index'])->name('customers.index');
+Route::get('customers/create',[TaskController::class,'create'])->name('customers.create');
+Route::post('customers',[TaskController::class,'store'])->name('customers.store');
+Route::get('customers/{id}',[TaskController::class,'show'])->name('customers.show');
+Route::get('customers/{id}/edit',[TaskController::class,'edit'])->name('customers.edit');
+Route::put('customers/{id}',[TaskController::class,'update'])->name('customers.update');
+Route::delete('customers/{photo}',[TaskController::class,'destroy'])->name('customers.destroy');
